@@ -17,9 +17,8 @@
 			if(arr.every((value,index,array)=>value===array[0])){
 				return -Infinity;
 			}
-			arr.sort((a,b)=>a-b);
-			const ans=arr[1];
-			return ans;	
+			const ans=arr.sort((a,b)=>b-a);
+			return ans[1];	
 		}
 
 		function Main() {
