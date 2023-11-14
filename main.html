@@ -10,16 +10,25 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			if(arr.length<=1)
+			{
+				return -Infinity;
+			}
+			if(arr.every((value,index,array)=>value===array[0])){
+				return -Infinity;
+			}
+			arr.sort((a,b)=>a-b);
+			const ans=arr[1];
+			return ans;	
 		}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
+		//	var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
+			//	arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+		//	alert(secondHighest(arr));
 		}
 		Main();
 	</script>
